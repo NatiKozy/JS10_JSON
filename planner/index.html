@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <form class="todo">
+    <h2>Добавить задачу</h2>
+    <input type="text" name="task" id="task" placeholder="Задача" onclick="this.value=''">
+    <input type="button" name="add" id="add" value="Добавить">
+    <!-- <input type="button" name="add" id="add" value="Добавить" onclick="checkTask()"> -->
+
+    <h2>Список задач</h2>
+    <ul id="task-list">
+        <li class="notasks" id="notasks">Задачи отсутствуют</li>
+    </ul>
+    <input type="button" name="clear" id="clear" value="Очистить список задач"  disabled>
+</form>
+</main>
+    <script src="./assets/script/script.js">
+    </script>
+</body>
+</html>
