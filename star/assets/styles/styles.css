@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1600px;
+    width: 100%;
+}
+
+h1{
+    font-weight: 500;
+}
+
+.container-list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+}
+
+.item{
+    width: 40%;
+    border: 5px solid blue;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    padding: 5px;
+}
+
+li{
+    list-style-type: none;
+}
