@@ -138,8 +138,8 @@ function createListPage(arr) {
     })
 }
 
-function createTemplate(user) {
-    const {name, universe, alterego, occupation, friends, superpowers, url, info, id, rating} = user;
+function createTemplate(hero) {
+    const {name, universe, alterego, occupation, friends, superpowers, url, info, id, rating} = hero;
 
     const div = document.createElement('div');
     div.classList.add('item');

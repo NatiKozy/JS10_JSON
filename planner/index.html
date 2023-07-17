@@ -12,18 +12,31 @@
 </head>
 <body>
 <main>
-    <form class="todo">
-    <h2>Добавить задачу</h2>
-    <input type="text" name="task" id="task" placeholder="Задача" onclick="this.value=''">
-    <input type="button" name="add" id="add" value="Добавить">
-    <!-- <input type="button" name="add" id="add" value="Добавить" onclick="checkTask()"> -->
-
-    <h2>Список задач</h2>
-    <ul id="task-list">
-        <li class="notasks" id="notasks">Задачи отсутствуют</li>
-    </ul>
-    <input type="button" name="clear" id="clear" value="Очистить список задач"  disabled>
-</form>
+    <main class="main">
+        <form action="/" class="form" name="taskDesk">
+            <div class="create-task">
+                <div class="container-title">
+                <h2 class="title">Добавить задачу</h2>
+                </div>
+                <p class="error"></p>
+                <div class="container">
+                <input class="add-task" type="text" name="task" id="task">
+                <input type="button" class="add-btn btn" onclick="addTask()" name="add" id="add" value="Добавить">
+            </div>
+            </div>
+            <div class="tasks-list">
+                <div class="container-title">
+                    <h2 class="title">Список задач:</h2>
+                    </div>
+                <div class="container">
+                    <div class="container-task">
+                <ol class="tasks" id="todoView"></ol>
+                <li class="notasks" >Задачи отсутствуют</li></div>
+                <input type="checkbox" class="checkbox hidden" />
+                <input type="button" onclick="clearTasks()" class="delete-btn btn"  name="delete" id="delete" value="Очистить" disabled>
+            </div>
+            </div>
+        </form>
 </main>
     <script src="./assets/script/script.js">
     </script>
