@@ -4,27 +4,28 @@ const clearBtn = document.querySelector('.delete-btn')
 const error = document.querySelector('.error');
 const form = document.forms.taskDesk;
 const hiddenEl = document.querySelector('.notasks')
-const myNodelist = document.getElementsByTagName("li");
-const todoView = document.getElementById('todoView')
-const checkbox = document.querySelectorAll('checkbox')
-const toDolist =[];
 
+
+
+
+function createPage() {
+    let taskList = document.createElement('li')
+    taskList.textContent = inputTask.value;
+    tasksContainer.append(taskList);
+    const check = document.createElement("input");
+    check.type = "checkbox"
+    check.classList.add('checkbox');
+    taskList.append(check);
+}
 function addTask() {
     if (inputTask.value === '') {
         return error.textContent = `Введите задачу`
-    } else {
+    }
         hiddenEl.classList.add('hidden');
         error.textContent = ``;
-        let taskList = document.createElement('li')
-        taskList.textContent = inputTask.value;
-        tasksContainer.append(taskList);
-        const check = document.createElement("input");
-        check.type = "checkbox"
-        check.classList.add('checkbox');
-        taskList.append(check);
+        createPage();
         clearBtn.removeAttribute('disabled')
         localStorage.setItem('tasks', tasksContainer.innerHTML)
-        }
         form.reset()
 }
 
@@ -36,7 +37,7 @@ showTask()
 
 
 function removeAttrDis () {
-    if (localStorage.getItem('tasks') !== null){
+    if (!localStorage.getItem('tasks') !== null){
         return clearBtn.removeAttribute('disabled')
     }
 }
